@@ -1,0 +1,21 @@
+<form class="form-container" #f="ngForm">
+    <h2>Update Worker</h2>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input required="true" [(ngModel)]="worker.name" name="name" matInput placeholder="Full Name">
+        <mat-error *ngIf="f.submitted && f.controls['name']?.invalid">Name Is Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Job Title</mat-label>
+        <input required="true" [(ngModel)]="worker.jobTitle" name="jobTitle" matInput placeholder="Job Description">
+        <mat-error *ngIf="f.submitted && f.controls['jobTitle']?.invalid">Job Title Is Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Story</mat-label>
+        <input required="true" [(ngModel)]="worker.story" name="story" matInput placeholder="What is your story?">
+        <mat-error *ngIf="f.submitted && f.controls['story']?.invalid">Story Is Required</mat-error>
+    </mat-form-field>
+  </form>

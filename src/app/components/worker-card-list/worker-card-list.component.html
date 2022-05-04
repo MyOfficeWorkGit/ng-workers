@@ -1,0 +1,6 @@
+<div class="card-list">
+    <div class="item-wrap" *ngFor="let item of cardService.getAllWorkers(); let i=index">
+        <app-worker-card class = "card" [worker] = item ></app-worker-card>
+        <mat-divider></mat-divider>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<mat-card class="worker-card"  matRipple class="clickable">
+
+    <mat-card-header>
+      <img class="header-image" mat-card-avatar src="{{worker?.badgeUrl}}" alt="Image Unavailable">
+      <mat-card-title>{{worker?.name}}</mat-card-title>
+      <mat-card-subtitle>{{worker?.jobTitle}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        {{worker?.story}}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-icon-button class="update-button" (click)="openDialog()">
+        <mat-icon>update</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" class="delete-button"  (click)="deleteWorker(worker.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+    
+  </mat-card>
